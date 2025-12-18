@@ -19,9 +19,9 @@ import java.util.Arrays;
  * Formato da resposta (tamanho fixo):
  * <ul>
  *   <li>1 byte   - Status da resposta</li>
- *   <li>127 bytes - Texto da mensagem</li>
+ *   <li>99 bytes - Texto da mensagem</li>
  * </ul>
- * Totalizando 128 bytes.
+ * Totalizando 100 bytes.
  * </p>
  */
 public class Response {
@@ -38,8 +38,9 @@ public class Response {
 
     /**
      * Tamanho fixo do campo de texto da resposta.
+     * * (Total da mensagem = 1 byte status + 99 bytes texto = 100 bytes)
      */
-    private static final int TEXT_SIZE = 127;
+    private static final int TEXT_SIZE = 99;
 
     /**
      * Status da resposta (STATUS_OK ou STATUS_ERROR).
